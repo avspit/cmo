@@ -21,8 +21,8 @@ def uniformSearchMethod(N=1, a=0, b=1):
     name = "Метод равномерного перебора"
     print(name)
     x_arr, y_arr = init_xy(N)
-    v_x = 0
-    v_y = 0
+    min_point_x = 0
+    min_point_y = 0
     step = (b - a) / N
     f_min = sys.maxsize
     for i in range(1, N+1, 1):
@@ -30,14 +30,14 @@ def uniformSearchMethod(N=1, a=0, b=1):
         f_val = func1(x)
         if (f_val < f_min):
             f_min = f_val
-            v_x = x
-            v_y = f_min
+            min_point_x = x
+            min_point_y = f_min
 
         x_arr[i-1] = x
         y_arr[i-1] = f_val
 
-    print("Результат: v =", f_min)
-    return x_arr, y_arr, v_x, v_y, name
+    print("Результат: min =", f_min)
+    return x_arr, y_arr, min_point_x, min_point_y, name
 
 def dichotomyMethod(N=1, a=0, b=1):
     """

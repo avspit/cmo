@@ -4,6 +4,7 @@ from lab01 import dichotomyMethod as dm
 from lab01 import goldenSectionSearch as gss
 from util import func_unimodal
 
+
 def init_variables():
     N = 100
     acc = 0.001
@@ -11,7 +12,8 @@ def init_variables():
     b = 8
     return N, acc, a, b
 
-if __name__ == '__main__':
+
+def lab_01():
     plt.rcParams['figure.figsize'] = [15, 4]
     fig = plt.figure(0)
     fig.canvas.set_window_title('Лабоработная работа 1')
@@ -37,3 +39,16 @@ if __name__ == '__main__':
     plt.scatter(min_point_x, min_point_y, color="red")
 
     plt.show()
+
+
+def lab_02():
+    plt.rcParams['figure.figsize'] = [15, 4]
+    fig = plt.figure(0)
+    fig.canvas.set_window_title('Лабоработная работа 2')
+
+    plt.show()
+
+
+if __name__ == '__main__':
+    #lab_01()
+    lab_02()

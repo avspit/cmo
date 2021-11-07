@@ -61,7 +61,7 @@ def mGoldenSectionSearch(f, acc, a, b, phi):
 
 
 def printResult(val):
-    print("=> Результат: ", round(val, 5))
+    print('=> Результат: {:.4f}'.format(val))
 
 
 def uniformSearchMethod(f, N=50, a=0, b=1):

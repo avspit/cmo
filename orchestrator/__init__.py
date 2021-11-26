@@ -53,9 +53,6 @@ def lab_01():
     plt.show()
 
 
-
-
-
 def plotFunc(x0):
     x = np.linspace(-5, 7, 100)
     plt.plot(x, lab02_func(x))

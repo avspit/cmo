@@ -57,7 +57,7 @@ def gradientDescent(func, fprime, x0, alpha, tol=1e-5, max_iter=1000, rule='1dmi
     # инициализируем x, f(x), and -f'(x)
     xk = x0
     fk = func(xk)
-    gfk = fprime(xk)
+    gfk = fprime(func, xk)
     gfk_norm = np.linalg.norm(gfk)
     pk = -gfk
     # инициализируем количество шагов, сохраняем x и f(x)
@@ -75,7 +75,7 @@ def gradientDescent(func, fprime, x0, alpha, tol=1e-5, max_iter=1000, rule='1dmi
 
         xk = xk + alpha * pk
         fk = func(xk)
-        pk = -fprime(xk)
+        pk = -fprime(func, xk)
         # увеличиваем счетчик на 1, сохраняем новый x и f(x)
         num_iter += 1
         curve_x.append(xk)

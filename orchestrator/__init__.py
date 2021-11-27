@@ -66,8 +66,9 @@ def plotPath(xs, ys, x0):
     plt.plot(xs[-1], ys[-1], 'ro')
 
 
-def fprime(x):
-    return 2*x - 2
+def fprime(f, x):
+    #return 2*x - 2
+    return (f(x + 0.01) - f(x)) / 0.01
 
 
 def lab_02():

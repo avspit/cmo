@@ -67,7 +67,6 @@ def plotPath(xs, ys, x0):
 
 
 def fprime(f, x):
-    #return 2*x - 2
     return (f(x + 0.01) - f(x)) / 0.01
 
 
